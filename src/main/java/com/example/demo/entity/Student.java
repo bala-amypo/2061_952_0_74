@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import java.time.LocalDate;
 
 import jakarta.persistance.Entity;
+
 import jakarta.persistance.Id;
 @Entity
 public class Student {
