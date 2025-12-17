@@ -9,5 +9,5 @@ public class StudentController{
     StudentService stdser;
     @PostMapping("addStatus")
     public Student addStudent(@RequestBody Student st){
-    return stdser.postStudent(st);
+    return stdrepo.save(st);
 }}
