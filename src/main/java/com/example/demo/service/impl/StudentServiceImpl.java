@@ -17,6 +17,10 @@ public class StudentServiceImpl implements StudentService{
     }
     @Override
     public List<Student> getAllStudents(){
-        
+        return stdrepo.findAll();
+    }
+    @GetMapping("getall")
+    public List<Student> get(){
+        return stdser
     }
 }
