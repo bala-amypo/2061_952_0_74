@@ -7,7 +7,8 @@ import com.example.demo.service.StudentService;
 public class StudentController{
     @Autowired
     StudentService stdser;
-    @PostMapping("addStatus")
+    @PostMapping("/addStatus")
     public Student addStudent(@RequestBody Student st){
-    return stdrepo.save(st);
-}}
+    return stdser.poststudent(st);
+}
+}
