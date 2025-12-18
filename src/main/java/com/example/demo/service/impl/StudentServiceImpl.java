@@ -1,34 +1,24 @@
 package com.example.demo.service.impl;
-
-import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
-
-import java.util.List;
-
+import java.util.*;
 @Service
 public class StudentServiceImpl implements StudentService{
     @Autowired
-    StudentRepository stdrepo; //creating object
+    StudentRepository stdrepo;
     @Override
     public Student poststudent(Student st){
-        return stdrepo.save(st);  //positing(saving) student details
+        return stdrepo.save(st);
     }
     @Override
     public List<Student> getAllStudents(){
         return stdrepo.findAll();
     }
-    @GetMapping("getall")
-    public List<Student> get(){
-        return stdser.getAllStudents();
-    }
     @Override
-    public Student getById(){
-        stdrepo.get.findAll();
+    public Optional<Student> getById(Long id){
+        return stdrepo.findById(id);
     }
-    @Override
-    public Optional<Student> getAllStudents();
 }
