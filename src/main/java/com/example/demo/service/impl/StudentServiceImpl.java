@@ -25,7 +25,7 @@ public class StudentServiceImpl implements StudentService{
     public List<Student> get(){
         return stdser.getAllStudents();
     }
-    @Override("/getall")
+    @Override
     public Student getById(){
         stdrepo.get.findAll();
     }
